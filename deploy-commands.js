@@ -4,7 +4,7 @@ const { REST, Routes } = require('discord.js');
 
 // 【修正後】
 const { clientId, guildId } = require('./config.json');
-const token = process.env.DISCORD_TOKEN; // Renderの環境変数から読み込む
+const token = process.env.TOKEN_GOES_HERE; // Renderの環境変数から読み込む
 const fs = require('node:fs');
 const path = require('node:path');
 
