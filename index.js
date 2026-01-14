@@ -1,7 +1,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
+// まず環境変数をチェックし、なければconfig.jsonのトークンを使う
+const config = require('./config.json');
+const token = process.env.DISCORD_TOKEN || config.token;
 
 const client = new Client({ intents: Object.values(GatewayIntentBits).reduce((a, b) => a | b) });
 
