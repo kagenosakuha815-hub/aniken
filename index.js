@@ -1,9 +1,9 @@
 const http = require('http');
 
 http.createServer(function (req, res) {
-  res.write("Bot is running!");
+  res.write("Bot is online!");
   res.end();
-}).listen(8080);
+}).listen(process.env.PORT || 8080); // ここを process.env.PORT にするのがコツ！
 
 const fs = require('node:fs');
 const path = require('node:path');
