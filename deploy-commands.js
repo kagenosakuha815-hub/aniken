@@ -33,8 +33,7 @@ const rest = new REST().setToken(token);
 		console.log(`${commands.length} 件のスラッシュコマンドを登録します`);
 
 		const data = await rest.put(
-			// Routes.applicationCommands(clientId),
-			Routes.applicationGuildCommands(clientId, guildId),
+			Routes.applicationCommands(clientId),
 			{ body: commands },
 		);
 
